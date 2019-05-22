@@ -136,9 +136,9 @@
 	<button onclick="saveMenus()">保存</button>
 </div>
 
-<script type="text/javascript" src="/self-menu/js/jquery.js"></script>
-<script type="text/javascript" src="/self-menu/js/vue.js"></script>
-<script type="text/javascript" src="/self-menu/js/menu.js"></script>
+<script type="text/javascript" src="/lwq_self_menu/js/jquery.js"></script>
+<script type="text/javascript" src="/lwq_self_menu/js/vue.js"></script>
+<script type="text/javascript" src="/lwq_self_menu/js/menu.js"></script>
 
 </body>
 </html>
