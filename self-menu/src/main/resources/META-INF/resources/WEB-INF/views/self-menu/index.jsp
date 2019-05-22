@@ -70,38 +70,55 @@
                     扫码推送（iPhone 5.4或者Android 5.4.1以上）
                 </label>
             	<div v-if="selectedMenu.type == 'scancode_push'">扫描二维码，服务器会收到扫描内容，并可下发信息</div>
+            	<div v-if="selectedMenu.type == 'scancode_push'">
+                    KEY <input v-model="selectedMenu.key"/>
+            	</div>
                 <label>
                     <input name="type" v-model="selectedMenu.type" value="scancode_waitmsg" type="radio"/>
                     扫码等待（iPhone 5.4或者Android 5.4.1以上）
                 </label>
             	<div v-if="selectedMenu.type == 'scancode_waitmsg'">扫描二维码，并等待服务器下发信息</div>
+            	<div v-if="selectedMenu.type == 'scancode_waitmsg'">
+                    KEY <input v-model="selectedMenu.key"/>
+            	</div>
                 <label>
                     <input name="type" v-model="selectedMenu.type" value="pic_sysphoto" type="radio"/>
                     拍照（iPhone 5.4或者Android 5.4.1以上）
                 </label>
             	<div v-if="selectedMenu.type == 'pic_sysphoto'">打开系统相机，把事件和图片发送给服务器</div>
+            	<div v-if="selectedMenu.type == 'pic_sysphoto'">
+                    KEY <input v-model="selectedMenu.key"/>
+            	</div>
                 <label>
                     <input name="type" v-model="selectedMenu.type" value="pic_photo_or_album" type="radio"/>
                     拍照或相册（iPhone 5.4或者Android 5.4.1以上）
                 </label>
-            	<div v-if="selectedMenu.type == 'pic_photo_or_album'">打开系统相机或者微信相册</div>
+            	<div v-if="selectedMenu.type == 'pic_photo_or_album'">
+                    KEY <input v-model="selectedMenu.key"/>
+            	</div>
                 <label>
                     <input name="type" v-model="selectedMenu.type" value="pic_weixin" type="radio"/>
                     相册（iPhone 5.4或者Android 5.4.1以上）
                 </label>
             	<div v-if="selectedMenu.type == 'pic_weixin'">打开微信相册，把事件和图片发送给服务器</div>
+            	<div v-if="selectedMenu.type == 'pic_weixin'">
+                    KEY <input v-model="selectedMenu.key"/>
+            	</div>
                 <label>
                     <input name="type" v-model="selectedMenu.type" value="location_select" type="radio"/>
                     地理位置（iPhone 5.4或者Android 5.4.1以上）
                 </label>
-            	<div v-if="selectedMenu.type == 'location_select'">选择地理位置并上报</div>
+            	<div v-if="selectedMenu.type == 'location_select'">
+            		选择地理位置并上报<br/>
+                    KEY <input v-model="selectedMenu.key"/>
+            	</div>
                 <label>
                     <input name="type" v-model="selectedMenu.type" value="media_id" type="radio"/>
                     素材（资质验证未通过时使用）
                 </label>
 	            <div v-if="selectedMenu.type == 'media_id'">
-	                选择永久素材的ID，可以是图片、音频、视频、图文素材。 
-	                <input v-model="selectedMenu.mediaId"/>
+	                选择永久素材的ID，可以是图片、音频、视频、图文素材。<br/>
+	                图文消息的ID<input v-model="selectedMenu.mediaId"/>
 	            </div>
                 <label>
                     <input name="type" v-model="selectedMenu.type" value="view_limited" type="radio"/>

@@ -1,7 +1,9 @@
 package org.fkjava.weixin.menu.domain;
 
+import java.util.LinkedList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,9 +25,9 @@ public class SelfMenu {
 	private String id;
 
 	// 一个自定义菜单，最多包含3个一级菜单
-	@OneToMany // 一对多
+	@OneToMany(cascade = CascadeType.ALL) // 一对多
 	@JoinColumn(name = "menu_id")
-	private List<Menu> subMenus;
+	private List<Menu> subMenus = new LinkedList<>();
 
 	public String getId() {
 		return id;

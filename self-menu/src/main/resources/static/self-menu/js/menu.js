@@ -190,7 +190,7 @@ function saveMenus(){
             console.log(responseData);
         },
         error: function (responseData) {
-            console.log(responseData);
+            console.error(responseData);
         }
 	});
 }

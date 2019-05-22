@@ -1,7 +1,9 @@
 package org.fkjava.weixin.menu.domain;
 
+import java.util.LinkedList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -34,9 +36,9 @@ public class Menu {
 	private String pagePath;
 	private String mediaId;
 	// 一个一级菜单最多7个二级菜单
-	@OneToMany // 一对多
+	@OneToMany(cascade = CascadeType.ALL)  // 一对多
 	@JoinColumn(name = "parent_id")
-	private List<Menu> subMenus;
+	private List<Menu> subMenus = new LinkedList<>();
 
 	// 使用@Transient注解，表示值不要保存到数据库，用于维护页面的状态。
 	@Transient

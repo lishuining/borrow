@@ -4,7 +4,7 @@ import org.fkjava.commons.domain.User;
 import org.fkjava.commons.domain.event.EventInMessage;
 import org.fkjava.commons.processors.EventMessageProcessor;
 import org.fkjava.commons.repository.UserRepository;
-import org.fkjava.weixin.service.WeiXinProxy;
+import org.fkjava.commons.service.WeiXinProxy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
