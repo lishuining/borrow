@@ -30,5 +30,6 @@
 		<module>commons</module>
 		<module>unsubscribe</module>
 		<module>self-menu</module>
+		<module>library</module>
 	</modules>
 </project>
