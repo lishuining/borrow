@@ -87,6 +87,13 @@
 			<!-- 如果在mvn命令直接运行，该依赖也会加入类路径 -->
 			<scope>provided</scope>
 		</dependency>
+
+		<!-- 加入JSTL的依赖 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 	</dependencies>
 
 	<build>
