@@ -38,7 +38,7 @@
 				${book.name }
 			</div>
 			<div class="buttons">
-				<span>+</span>
+				<span onclick="document.location.href='/kemao_3/library/debit?bookId=${book.id}'">+</span>
 			</div>
 		</div>
 	</c:forEach>
