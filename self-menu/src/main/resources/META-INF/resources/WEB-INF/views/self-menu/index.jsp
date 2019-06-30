@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>菜单管理</title>
-<link rel="stylesheet" href="/lsn_self-menu/css/menu.css"/>
+<link rel="stylesheet" href="/lsn_self_menu/css/menu.css"/>
 </head>
 <body>
 <div class="main-container">
