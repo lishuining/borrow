@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>图书馆首页</title>
-<link href="/kemao_3/library/css/main.css" rel="stylesheet"/>
+<link href="/lsn/library/css/main.css" rel="stylesheet"/>
 </head>
 <body>
 	<form method="get">
@@ -33,12 +33,12 @@
 	<c:forEach items="${page.content }" var="book">
 		<%-- book.name相当于是book.getName() --%>
 		<div class="item">
-			<img style="" alt="" src="/kemao_3/library/images/${book.image }" />
+			<img style="" alt="" src="/lsn/library/images/${book.image }" />
 			<div class="name">
 				${book.name }
 			</div>
 			<div class="buttons">
-				<span onclick="document.location.href='/kemao_3/library/debit?bookId=${book.id}'">+</span>
+				<span onclick="document.location.href='/lsn/library/debit?bookId=${book.id}'">+</span>
 			</div>
 		</div>
 	</c:forEach>
