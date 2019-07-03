@@ -32,7 +32,7 @@
 	<%-- ${ page.content } 其实相当于前面的 request.getAttribute("page") + content = page.getContent() --%>
 	<c:forEach items="${page.content }" var="book">
 		<%-- book.name相当于是book.getName() --%>
-		<div class="item">
+		<div class="item" style="border:1px solid red none;">
 			<img style="" alt="" src="/lsn/library/images/${book.image }" />
 			<div class="name">
 				${book.name }

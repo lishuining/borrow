@@ -1,5 +1,12 @@
-.item {
+.item *{
 	padding: 0px;
+	
+	display:inline-block;
+	vertical-align:middle;
+}
+.item{
+	background-color:#CFF;
+	margin-top:10px;
 }
 
 .item:hover {
@@ -7,27 +14,60 @@
 }
 
 .item img {
-	display: inline;
-	height: 50px;
+	display:inline-block;
+	height: 30%;
+	width:12%;
 }
 
 .item .name {
-	display: inline;
+	display:inline-block;
+	font-size:20px;
+	border:1px solid blue none;
+	height:30%;
+	width:80%;
 }
 
 .item .buttons {
-	display: inline;
+	display:inline-block;
 	float: right;
-	padding-top: 5px;
+	padding-top: 0px;
 }
 
 .item .buttons span {
 	background-color: #fff;
 	border: 1px solid #eee;
 	padding: 5px 15px;
+	background-color:#9C0;
+	border-radius:20px;
 }
 
 .item .buttons span:hover {
 	background-color: #eee;
 	cursor: pointer;
+}
+button{
+	background-color:red;
+	border:none;
+	border-radius:10px;
+	height:60px;
+	width:13%;
+	font-size:25px;
+	font-weight:bold;
+}
+input{
+	width:85%;
+	height:50px;
+	border-color:blue;
+	border-radius:10px;
+}
+a{
+	text-decoration:none;
+	border:1px solid red none;
+	background-color:greenyellow;
+	border-radius:5px;
+	font-size:25px;
+	color:black;
+	float:right;
+	margin:5px;
+	margin-top:50px;
 }
