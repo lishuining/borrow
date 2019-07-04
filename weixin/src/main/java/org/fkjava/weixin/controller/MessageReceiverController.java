@@ -17,12 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 // Controller（控制器），其实就相当于是Servlet，但是Spring MVC把所有的Servlet相关API都屏蔽掉了！
-// 屏蔽的好处：不需要依赖Tomcat就可以实现单元测试。
+
 @RestController // 基于RESTful风格的WEB服务的控制器
 @RequestMapping("/lsn/wexin/reciver") // 访问哪个路径的时候，被此控制器处理
 public class MessageReceiverController {
 
-	// 自动从Spring的容器里面获取一个消息服务出来，用于处理转换后的消息。现在还未实现消息的处理。
+	
 	// 能够自动根据接口和实现的关系，自动把合适类型的对象放进来。
 	@Autowired
 	private MessageService messageService;
@@ -41,11 +41,7 @@ public class MessageReceiverController {
 			@RequestParam("nonce") String nonce, //
 			@RequestParam("echostr") String echostr//
 	) {
-		// 正常的接入方法要求对数据的有效性进行验证，验证通过以后返回echostr
-		// 把timestamp和nonce放入一个数组，并且对两个字符串进行排序
-		// 排序以后，把数组里面的元素拼接成一个String，使用SHA1算法进行加密
-		// 加密的时候，需要使用一个【秘钥】，这个秘钥在公众号平台中生成的
-		// 加密的以后的内容，如果跟signature相同，表示验证通过
+		
 
 		return echostr;
 	}
@@ -67,11 +63,7 @@ public class MessageReceiverController {
 				+ "收到的请求内容\n{}\n"//
 				, signature, timestamp, nonce, xml);
 
-//		if(xml.indexOf("<MsgType><![CDATA[event]]></MsgType>")>0) {
-//			// 事件
-//		}else if(xml.indexOf("<MsgType><![CDATA[location]]></MsgType>")>0) {
-//			// 位置
-//		}//......
+
 
 		// 截取XML字符串里面的消息类型
 		String type = xml.substring(xml.indexOf("<MsgType><![CDATA[") + 18);

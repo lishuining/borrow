@@ -39,11 +39,11 @@ public abstract class InMessage implements Serializable {
 	@JsonProperty("MsgId")
 	private Long msgId;
 
-	// 抽象父类、非抽象类都必须有无参构造器
+	
 	public InMessage() {
 	}
 
-	// 提供一个有参的构造器，要求必须有消息类型传入
+	
 	protected InMessage(String type) {
 		this.msgType = type;
 	}

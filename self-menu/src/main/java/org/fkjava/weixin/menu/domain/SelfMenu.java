@@ -24,8 +24,8 @@ public class SelfMenu {
 	@Column(length = 36)
 	private String id;
 
-	// 一个自定义菜单，最多包含3个一级菜单
-	@OneToMany(cascade = CascadeType.ALL) // 一对多
+	// 一个自定义菜单
+	@OneToMany(cascade = CascadeType.ALL) 
 	@JoinColumn(name = "menu_id")
 	private List<Menu> subMenus = new LinkedList<>();
 

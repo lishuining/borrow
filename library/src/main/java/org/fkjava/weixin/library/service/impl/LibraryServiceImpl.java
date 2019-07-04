@@ -77,19 +77,5 @@ public class LibraryServiceImpl implements LibraryService {
 				// 如果第一条记录存在，则从集合里面删除
 				.ifPresent(item -> list.getItems().remove(item));
 
-		// 命令式编程，已经过时
-//		// 1.找到需要被删除的对象
-//		DebitItem item = null;
-//		for (DebitItem i : list.getItems()) {
-//			if (i.getBook().getId().equals(id)) {
-//				item = i;
-//				break;
-//			}
-//		}
-//		// 2.如果找到了可以被删除的对象
-//		if (item != null) {
-//			// 3.从集合里面删除
-//			list.getItems().remove(item);
-//		}
 	}
 }

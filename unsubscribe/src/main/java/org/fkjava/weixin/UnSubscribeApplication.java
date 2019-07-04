@@ -45,10 +45,10 @@ public class UnSubscribeApplication implements ApplicationContextAware
 	@Override
 	public void handleEvent(EventInMessage event) {
 		LOG.trace("事件处理程序收到的消息：{}", event);
-		String eventType = event.getEvent();// 获取事件类型
-		eventType = eventType.toLowerCase();// 转换为小写
+		String eventType = event.getEvent();
+		eventType = eventType.toLowerCase();
 
-		// 调用消息的处理器，进行具体的消息处理
+		// 调用消息的处理器
 		String beanName = eventType + "MessageProcessor";
 		EventMessageProcessor mp = (EventMessageProcessor) ctx.getBean(beanName);
 		if (mp == null) {

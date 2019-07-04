@@ -21,18 +21,7 @@ public class DebitController {
 	@Autowired
 	private LibraryService libraryService;
 
-//	@RequestMapping
-//	public String debit(@RequestParam("bookId") String bookId, //
-//			// 从Session中获取名为debitList的对象，并且不是必须的
-//			@SessionAttribute(name = "debitList", required = false) DebitList list, //
-//			Model model) {
-//		if (list == null) {
-//			list = new DebitList();
-//			// 如果debitList在Session里面是空的，那么创建一个并放入Model里面。
-//		}
-//		model.addAttribute("debitList", list);
-//		return "";
-//	}
+
 
 	@RequestMapping
 	public ModelAndView debit(@RequestParam("bookId") String bookId, //

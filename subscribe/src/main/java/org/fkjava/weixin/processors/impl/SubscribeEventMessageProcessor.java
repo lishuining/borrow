@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-// 把对象加入Spring容器，并且根据事件处理查找Bean的规则给一个名字
+
 @Service("subscribeMessageProcessor")
 public class SubscribeEventMessageProcessor implements EventMessageProcessor {
 
@@ -30,17 +30,7 @@ public class SubscribeEventMessageProcessor implements EventMessageProcessor {
 			return;
 		}
 
-		// 1.检查用户是否已经关注
-		// 1.1.需要查询数据库里面是否有关注记录，需要增加spring-data-jpa的依赖，基于Spring Data JPA来操作数据库
-//		<dependency>
-//			<groupId>org.springframework.boot</groupId>
-//			<artifactId>spring-boot-starter-data-jpa</artifactId>
-//		</dependency>
-
-		// 1.2.在domain里面增加User类，表示用户信息，字段最少要包含用户的ID、昵称、关注状态，
-		// 详细的用户信息参考公众号文档里面的用户信息接口。
-		// 具体参考《User.java》
-
+		
 		// 1.3.需要增加一个repository包，在此包里面增加UserRepository接口，用于操作User类的数据
 
 		// 1.4.在UserRepository类里面增加一个根据用户的OpenID来查询用户信息的方法，如果返回一个User对象，表示之前有关注

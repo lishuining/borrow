@@ -28,7 +28,7 @@ public class TokenManager {
 	private RedisTemplate<String, AccessToken> accessTokenTemplate;
 
 	public String getToken() {
-		// 1.获取本地令牌
+		
 		// 需要配置一个RedisTemplate用于管理令牌
 		BoundValueOperations<String, AccessToken> ops = accessTokenTemplate.boundValueOps("weixin_access_token");
 		AccessToken at = ops.get();
@@ -39,7 +39,7 @@ public class TokenManager {
 			for (int i = 0; i < 10; i++) {
 				LOG.trace("缓存中没有令牌，尝试加上分布式锁");
 				// 3.调用远程接口获取令牌，并在获取到令牌以后，把令牌存储在Redis里面
-				// 增加分布式锁： 如果key不存在则设置进去；而如果key存在则等待60秒才能设置进去
+				
 				Boolean result = accessTokenTemplate.boundValueOps("weixin_access_token_lock")//
 						.setIfAbsent(new AccessToken());
 				LOG.trace("增加分布式锁的结果：{}", result);
@@ -104,7 +104,7 @@ public class TokenManager {
 
 		// 3.调用远程接口，返回JSON
 		// BodyHandlers里面包含了许多内置的请求体、响应体的处理程序，ofString意思是使用String方式返回
-		// Charset.forName("UTF-8")指定字符编码
+		
 		try {
 			HttpResponse<String> response = client.send(request, BodyHandlers.ofString(Charset.forName("UTF-8")));
 

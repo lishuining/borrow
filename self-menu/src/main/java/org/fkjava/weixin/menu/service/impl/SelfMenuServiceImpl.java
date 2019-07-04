@@ -44,7 +44,7 @@ public class SelfMenuServiceImpl implements SelfMenuService {
 		this.selfMenuRepository.save(menu);
 
 		// 把菜单同步到微信公众号！
-		// 1.把菜单转换成JSON字符串
+		
 		ObjectMapper mapper = new ObjectMapper();
 		ObjectNode selfMenuNode = mapper.createObjectNode();
 		ArrayNode buttonNode = mapper.createArrayNode();

@@ -28,7 +28,7 @@ public class Menu {
 	private String id;
 	private String name;
 	private String type;
-	// 使用反单引号的目的：避免把关键字生成SQL语句，关键字生成SQL语句，会造成创建表失败
+
 	@Column(name = "`key`")
 	private String key;
 	private String appId;

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 @EnableJpaRepositories(basePackages = "org.fkjava")
 @EntityScan(basePackages = "org.fkjava")
 public class SubscribeApplication implements ApplicationContextAware
-// 为了让非WEB应用能够一直等待信息的到来，必须实现CommandLineRunner接口
+
 		, EventListenerConfig {
 
 	private static final Logger LOG = LoggerFactory.getLogger(SubscribeApplication.class);

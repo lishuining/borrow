@@ -10,7 +10,7 @@ import org.fkjava.commons.domain.text.TextInMessage;
 /**
  * 负责注册消息类型，把MsgType和对应的class关联起来
  * 
- * @author lwq
+ * @author 
  *
  */
 public class MessageTypeRegister {
